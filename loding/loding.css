@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: lightsteelblue;
+}
+
+#box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+;}
+
+.side {
+    width: 200px;
+    height: 40px;
+    background-color: rgba(240,240,255,0.5);
+}
+
+
+.top {
+    transform: skew(-60deg, 30deg);
+}

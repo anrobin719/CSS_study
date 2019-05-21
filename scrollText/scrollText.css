@@ -1,0 +1,70 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    color: black;
+    font-size: 32px;
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+    background-color: lemonchiffon;
+}
+
+#contents {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box {
+    position: absolute;
+    display: flex;
+    line-height: 50px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 50px;
+    margin: 0 0 50px 10px;
+    padding: 2px 15px;
+    line-height: 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: white;
+}
+
+.textWrap {
+    height: 50px;
+    overflow: hidden;
+}
+
+.textWrap>div:first-child {
+    background-color: #ff9090;
+    animation: flow 5s linear infinite;
+}
+
+.textWrap>div:nth-child(2) {
+    background-color: #6cd8e9;
+}
+
+.textWrap>div:last-child {
+    background-color: #5fec82;
+}
+
+@keyframes flow {
+    0% {margin-top: 50px;}
+    5% {margin-top: 0px;}
+    33% {margin-top: 0px;}
+    38% {margin-top: -100px;}
+    66% {margin-top: -100px;}
+    71% {margin-top: -200px;}
+    100% {margin-top: -200px;}
+    
+}
