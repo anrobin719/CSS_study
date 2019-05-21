@@ -10,20 +10,48 @@ body {
     background-color: lightsteelblue;
 }
 
-#box {
+.box {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-;}
-
-.side {
     width: 200px;
     height: 40px;
-    background-color: rgba(240,240,255,0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progressbar {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(-30deg);
+}
+
+.side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240,240,255,0.3);
 }
 
 
+.bottom {
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    box-shadow: 10px 10px 50px rgba(0,0,0,0.3);
+}
+
 .top {
-    transform: skew(-60deg, 30deg);
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+
+.front {
+    transform: rotateY(-90deg);
+    transform-origin: right;
+
+}
+
+.back {
+    transform: rotateY(90deg);
+    transform-origin: left;
 }
