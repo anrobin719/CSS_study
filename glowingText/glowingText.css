@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+
+body {
+    background-color: rgb(86, 52, 141);
+    color: white;
+}
+
+.text {
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Baloo Bhai', cursive;
+
+    transform: skewY(-6deg) translate(-50%, -50%);
+    transform-origin: bottom left;
+    color: transparent;
+
+    text-shadow:
+    /*1px -1px 10px rgba(255,255,255,0.4),
+    0px -1px 10px rgba(255,255,255,0.4),
+    -1px -1px 10px rgba(255,255,255,0.4),*/
+
+    0px -2px 3px rgb(255, 244, 229),
+    -1px -2px 3px rgb(255, 244, 229),
+    -2px -2px 3px rgb(255, 244, 229),
+    
+    -1px -3px 3px rgb(241, 198, 144),
+    -2px -3px 3px rgb(241, 198, 144),
+    -3px -3px 3px rgb(241, 198, 144),
+
+    -2px -4px 2px rgb(255, 244, 229),
+    -3px -4px 2px rgb(255, 244, 229),
+    -4px -4px 2px rgb(255, 244, 229),
+    
+    -3px -5px 1px rgb(255, 244, 229),
+    -4px -5px 1px rgb(255, 244, 229),
+    -5px -5px 1px rgb(255, 244, 229);
+
+}
+
+.text::before {
+    content: "GLOW";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: skewX(30deg);
+    transform-origin: bottom left;
+    z-index: -1;
+    color: transparent;
+
+    text-shadow:
+    20px 0px 15px rgba(0,0,0, 0.12),
+    20px 0px 20px rgba(0,0,0,0.01),
+    20px 0px 25px rgba(0,0,0,0.08),
+    20px 0px 30px rgba(0,0,0,0.05);
+}
