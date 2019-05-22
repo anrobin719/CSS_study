@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-color: lightsteelblue;
+    background-color: rgb(40, 40, 180);
 }
 
 .box {
@@ -28,6 +28,8 @@ body {
 
 .side {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(240,240,255,0.3);
@@ -41,17 +43,40 @@ body {
 }
 
 .top {
-    transform: rotateX(-90deg);
-    transform-origin: top;
-}
-
-.front {
-    transform: rotateY(-90deg);
-    transform-origin: right;
-
+    transform: translate(0%, -100%) rotateX(90deg);
+    transform-origin: bottom;
 }
 
 .back {
+    transform: translateZ(-40px);
+}
+
+.left {
+    width: 40px;
     transform: rotateY(90deg);
     transform-origin: left;
+    background-color: rgba(23,234,234,0.6);
+}
+
+.bar {
+    height: 100%;
+    width: 0;
+    background-color: rgba(23,234,234,0.6);
+    box-shadow: 0 0 30px rgba(23,234,234,0.3);
+    animation: loding 4s ease-in-out 1s infinite;
+}
+
+#loding {
+    color: white;
+    font: 700 26px montserrat, san-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 70px 0 0 15px;
+}
+
+@keyframes loding {
+    0%  {width: 0%}
+    100% {width: 100%}
 }
