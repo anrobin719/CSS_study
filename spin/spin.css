@@ -1,0 +1,272 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black url("img/stars_milky_way.jpg") no-repeat center/cover;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    z-index: -100;
+}
+
+
+.jupiter, .europa, .io, .ganymede, .callisto {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.jupiter, .jupiter::before, .jupiter::after, .europa, .europa::before, .europa::after, .io, .io::before, .io::after, .ganymede, .ganymede::before, .ganymede::after, .callisto, .callisto::before, .callisto::after {
+    position: absolute;
+}
+
+.jupiter::before, .jupiter::after, .europa::before, .europa::after, .io::before, .io::after, .ganymede::before, .ganymede::after, .callisto::before, .callisto::after {
+    content: '';
+    display: block;
+    height: 100%;
+}
+
+.jupiter::before, .europa::before, .io::before, .ganymede::before, .callisto::before{
+    width: 100%;
+    z-index: 1;
+}
+
+.jupiter::after, .europa::after, .io::after, .ganymede::after, .callisto::after {
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    width: 400%;
+    z-index: -2;
+}
+
+
+/****************************jupiter*********************************/
+.jupiter {
+    top: calc(50% - 5em);
+    left: calc(50% - 5em);
+    width: 10em;
+    height: 10em;
+    will-change: transform;
+/*    outline: 1px solid red;*/
+}
+
+.jupiter::before {
+    background-image:
+        radial-gradient(100% 125% at 40% 50%, rgba(0,0,0,0) 40%, black 50%),
+        radial-gradient(100% 100% at center, rgba(173, 150, 119, 0) 47%, rgba(173, 150, 119, 0.5) 50%);
+}
+
+.jupiter::after {
+  animation: Spin 20s linear infinite;
+  background-image: url(img/jupiter.jpg);
+}
+
+
+
+/****************************m1*********************************/
+.io {
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 2em;
+    animation: ioOrbitX 5s ease-in-out infinite alternate;
+    transform: translateZ(0) translateX(0);
+}
+
+.io::before {
+  background-image: radial-gradient(100% 125% at 40% 50%, rgba(0, 0, 0, 0) 40%, black 50%);
+  box-shadow: 0 0 0.5em inset;
+}
+
+.io::after {
+    animation: Spin 1s linear infinite;
+    background-image: url(img/io.jpg);
+}
+
+.ioBox {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: calc(50% - 1em);
+    left: calc(50% - 1em);
+    transform: translateZ(0);
+    animation: ioOrbitZ 10s linear infinite;
+}
+
+@keyframes ioOrbitX {
+    0% {transform: translateX(15em)}
+    100% {transform: translateX(-15em)}
+}
+
+@keyframes ioOrbitZ {
+    0% {transform: translateZ(0em)}
+    25% {transform: translateZ(8em)}
+    50% {transform: translateZ(0em)}
+    75% {transform: translateZ(-8em)}
+    100% {transform: translateZ(0em)}
+}
+
+
+
+
+
+
+/****************************m2*********************************/
+.europa {
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    animation: europaOrbitX 7.5s ease-in-out infinite alternate;
+    transform: translateZ(0) translateX(0);
+}
+
+.europa::before {
+  background-image: radial-gradient(100% 125% at 40% 50%, rgba(0, 0, 0, 0) 40%, black 50%);
+  box-shadow: 0 0 0.5em inset;
+}
+
+.europa::after {
+    animation: Spin 5s linear infinite;
+    background-image: url("img/europa_texture_map.jpg");
+}
+
+.europaBox {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: calc(50% - .5em);
+    left: calc(50% - .5em);
+    transform: translateZ(0);
+    animation: europaOrbitZ 15s linear infinite;
+}
+
+@keyframes europaOrbitX {
+    0% {transform: translateX(20em)}
+    100% {transform: translateX(-20em)}
+}
+
+@keyframes europaOrbitZ {
+    0% {transform: translateZ(0em)}
+    25% {transform: translateZ(7em)}
+    50% {transform: translateZ(0em)}
+    75% {transform: translateZ(-7em)}
+    100% {transform: translateZ(0em)}
+}
+
+
+
+/****************************m3*********************************/
+.ganymede {
+    top: 0;
+    left: 0;
+    width: 4em;
+    height: 4em;
+    animation: ganymedeOrbitX 15s ease-in-out infinite alternate;
+    transform: translateZ(0) translateX(0);
+}
+
+.ganymede::before {
+  background-image: radial-gradient(100% 125% at 40% 50%, rgba(0, 0, 0, 0) 40%, black 50%);
+  box-shadow: 0 0 0.5em inset;
+}
+
+.ganymede::after {
+    animation: Spin 10s linear infinite;
+    background-image: url(img/ganymede_texture_map.jpg);
+}
+
+.ganymedeBox {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: calc(50% - 2em);
+    left: calc(50% - 2em);
+    transform: translateZ(0);
+    animation: ganymedeOrbitZ 30s linear infinite;
+}
+
+@keyframes ganymedeOrbitX {
+    0% {transform: translateX(25em)}
+    100% {transform: translateX(-25em)}
+}
+
+@keyframes ganymedeOrbitZ {
+    0% {transform: translateZ(0em)}
+    25% {transform: translateZ(10em)}
+    50% {transform: translateZ(0em)}
+    75% {transform: translateZ(-10em)}
+    100% {transform: translateZ(0em)}
+}
+
+
+
+
+
+
+/****************************m4*********************************/
+.callisto {
+    top: 0;
+    left: 0;
+    width: 3em;
+    height: 3em;
+    animation: callistoOrbitX 25s ease-in-out infinite alternate;
+    transform: translateZ(0) translateX(0);
+}
+
+.callisto::before {
+  background-image: radial-gradient(100% 125% at 40% 50%, rgba(0, 0, 0, 0) 40%, black 50%);
+  box-shadow: 0 0 0.5em inset;
+}
+
+.callisto::after {
+    animation: Spin 20s linear infinite;
+    background-image: url(img/callisto.jpg);
+}
+
+.callistoBox {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: calc(50% - 1.5em);
+    left: calc(50% - 1.5em);
+    transform: translateZ(0);
+    animation: callistoOrbitZ 50s linear infinite;
+}
+
+@keyframes callistoOrbitX {
+    0% {transform: translateX(35em)}
+    100% {transform: translateX(-35em)}
+}
+
+@keyframes callistoOrbitZ {
+    0% {transform: translateZ(0em)}
+    25% {transform: translateZ(25em)}
+    50% {transform: translateZ(0em)}
+    75% {transform: translateZ(-25em)}
+    100% {transform: translateZ(0em)}
+}
+
+
+
+
+
+
+
+/****************************spin animation*********************************/
+
+@keyframes Spin {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(-50%)};
+}
+
+
+
+
+
+
+
+
+
+
