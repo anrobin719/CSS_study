@@ -1,0 +1,131 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    color: #000;
+    font-size: 40px;
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+   background-color: #fff;
+}
+
+a{
+    font: 200 14px/14px san-serif;
+    color: #bebebe;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+}
+
+#box {
+    display: flex;
+    justify-content: center;
+    margin-top: 280px;
+    line-height: 50px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 50px;
+    margin: 0 10px 50px 10px;
+    padding: 2px 15px;
+    line-height: 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: white;
+}
+
+.textWrap {
+    height: 50px;
+    overflow: hidden;
+}
+
+.textWrap>div:first-child {
+    background-color: #b91488;
+    animation: flow 5s linear infinite;
+}
+
+.textWrap>div:nth-child(2) {
+    background-color: #488a0a;
+}
+
+.textWrap>div:last-child {
+    background-color: #720d00;
+}
+
+@keyframes flow {
+    0% {margin-top: 50px;}
+    5% {margin-top: 0px;}
+    33% {margin-top: 0px;}
+    38% {margin-top: -100px;}
+    66% {margin-top: -100px;}
+    71% {margin-top: -200px;}
+    100% {margin-top: -200px;}
+    
+}
+
+
+img {
+    position: absolute;
+    z-index: -1;
+}
+
+#chips {
+    width: 900px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#chip1 {
+    width: 400px;
+    top: -50px;
+    left: -70px;
+}
+
+#chip2 {
+    width: 350px;
+    bottom: 0px;
+    left: 100px;
+}
+
+#chip3 {
+    width: 300px;
+    top: 0;
+    right: 200px;
+}
+
+#chip4 {
+    width: 500px;
+    bottom: 0px;
+    right: -120px;
+}
+
+#red {
+    width: 500px;
+    bottom: -50px;
+    right: -200px;
+    z-index: -2;
+}
+
+#green {
+    height: 400px;
+    top: 70px;
+    left: -100px;
+    z-index: -3;
+}
