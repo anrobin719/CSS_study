@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            overflow: hidden;
+            background-color: black;
+        }
+        .bld {
+            display: none;
+        }
+        #walk {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 262px;
+            height: 262px;
+        }
+        #move {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url(images/spritesheet.png);
+            background-origin: top left;
+            background-position: -350px -350px;
+            animation: move 1s steps(1) infinite;
+        }
+        @keyframes move {
+            0% {background-position: 0px 0px;}
+            4.3% {background-position: -262px 0px;}
+            8.6% {background-position: -524px 0px;}
+            13% {background-position: -786px 0px;}
+            17.3% {background-position: -1048px 0px;}
+            21.6% {background-position: -1310px 0px;}
+            25.9% {background-position: -1572px 0px;}
+            30.2% {background-position: -1834px 0px;}
+            34.5% {background-position: 0px -262px;}
+            38.8% {background-position: -262px -262px;}
+            43.1% {background-position: -524px -262px;}
+            47.4% {background-position: -786px -262px;}
+            51.7% {background-position: -1048px -262px;}
+            56% {background-position: -1310px -262px;}
+            60.3% {background-position: -1572px -262px;}
+            64.6% {background-position: -1834px -262px;}
+            68.9% {background-position: 0px -524px;}
+            73.2% {background-position: -262px -524px;}
+            77.5% {background-position: -524px -524px;}
+            81.8% {background-position: -786px -524px;}
+            86.1% {background-position: -1048px -524px;}
+            90.4% {background-position: -1310px -524px;}
+            94.7% {background-position: -1572px -524px;}
+            100% {background-position: -1834px -524px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="walk">
+        <span class="bld">monster</span>
+        <span id="move"></span>
+    </div>
+</body>
+</html>
