@@ -1,0 +1,72 @@
+html, body, #wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 210px;
+    background: url("img/ground.png") repeat-x bottom/auto 210px;
+}
+
+#charBox {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    width: 144px;
+    height: 144px;
+}
+
+#move {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("img/thunder.png") no-repeat;
+    background-origin: top left;
+    background-position: 0 0;
+    animation: stay 1s steps(1) infinite;
+    /*animation: jump .8s steps(1) infinite;*/
+    /*animation: run .7s steps(1) infinite;*/
+    /*animation: push 1s steps(1) infinite;*/
+}
+
+@keyframes stay {
+    0% {background-position: 0px 0;}
+    20% {background-position: -144px 0;}
+    40% {background-position: -288px 0;}
+    60% {background-position: -432px 0;}
+    80% {background-position: -576px 0;}
+    100% {background-position: -576px 0;}
+}
+
+@keyframes jump {
+    0% {background-position: 0px -144px;}
+    20% {background-position: -144px -144px;}
+    40% {background-position: -288px -144px;}
+    60% {background-position: -432px -144px;}
+    80% {background-position: -576px -144px;}
+    100% {background-position: -576px -144px;}
+}
+
+@keyframes run {
+    0% {background-position: 0px -288px;}
+    16.6% {background-position: -144px -288px;}
+    33.3% {background-position: -288px -288px;}
+    50% {background-position: -432px -288px;}
+    66.6% {background-position: -576px -288px;}
+    83.3% {background-position: -720px -288px;}
+    100% {background-position: -720px -288px;}
+}
+
+@keyframes push {
+    0% {background-position: 0px -432px;}
+    20% {background-position: -144px -432px;}
+    40% {background-position: -288px -432px;}
+    60% {background-position: -432px -432px;}
+    80% {background-position: -576px -432px;}
+    100% {background-position: -576px -432px;}
+}
