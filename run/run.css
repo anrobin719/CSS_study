@@ -5,6 +5,25 @@ html, body, #wrapper {
     padding: 0;
 }
 
+body {
+    background: url(img/bg4.png) no-repeat center/cover;
+    color: white;
+}
+
+h1, p {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+    margin: 150px auto 0;
+    font-size: 60px;
+}
+
+p {
+    margin: 40px auto 0;
+    font-size: 20px;
+}
 #ground {
     position: absolute;
     bottom: 0;
@@ -28,45 +47,28 @@ html, body, #wrapper {
     background: url("img/thunder.png") no-repeat;
     background-origin: top left;
     background-position: 0 0;
-    animation: stay 1s steps(1) infinite;
-    /*animation: jump .8s steps(1) infinite;*/
-    /*animation: run .7s steps(1) infinite;*/
-    /*animation: push 1s steps(1) infinite;*/
+    animation: stay 1s steps(5) infinite;
+    /*animation: jump .7s steps(5) infinite;*/
+    /*animation: run .7s steps(6) infinite;*/
+    /*animation: push .6s steps(5) infinite;*/
 }
 
 @keyframes stay {
-    0% {background-position: 0px 0;}
-    20% {background-position: -144px 0;}
-    40% {background-position: -288px 0;}
-    60% {background-position: -432px 0;}
-    80% {background-position: -576px 0;}
-    100% {background-position: -576px 0;}
+    from {background-position: 0 0;}
+    to {background-position: -720px 0;}
 }
 
 @keyframes jump {
-    0% {background-position: 0px -144px;}
-    20% {background-position: -144px -144px;}
-    40% {background-position: -288px -144px;}
-    60% {background-position: -432px -144px;}
-    80% {background-position: -576px -144px;}
-    100% {background-position: -576px -144px;}
+    from {background-position: 0 -144px;}
+    to {background-position: -720px -144px;}
 }
 
 @keyframes run {
-    0% {background-position: 0px -288px;}
-    16.6% {background-position: -144px -288px;}
-    33.3% {background-position: -288px -288px;}
-    50% {background-position: -432px -288px;}
-    66.6% {background-position: -576px -288px;}
-    83.3% {background-position: -720px -288px;}
-    100% {background-position: -720px -288px;}
+    from {background-position: 0px -288px;}
+    to {background-position: -864px -288px;}
 }
 
 @keyframes push {
-    0% {background-position: 0px -432px;}
-    20% {background-position: -144px -432px;}
-    40% {background-position: -288px -432px;}
-    60% {background-position: -432px -432px;}
-    80% {background-position: -576px -432px;}
-    100% {background-position: -576px -432px;}
+    from {background-position: 0 -432px;}
+    to {background-position: -720px -432px;}
 }
